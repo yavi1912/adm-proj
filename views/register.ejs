@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome  link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap core CSS -->
+    <link href="css/register.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/css/styles.css" rel="stylesheet">
+
+    <!-- Bootsstrap Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+
+
+    <link href="/public/assets/js/bootstrap.bundle.js" rel="stylesheet">
+    <title>Register</title>
+</head>
+<script>
+    function myFunction() {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+            x.type = "text";
+        } else {
+            x.type = "password";
+        }
+    }
+</script>
+
+<body>
+    <section style="background-color: #12587a;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col col-xl-10">
+                    <div class="card" style="border-radius: 1rem;">
+                        <div class="row g-0">
+                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                                    alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                            </div>
+                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 text-black">
+                                    <div class="d-flex align-items-center  pb-1">
+                                        <img src="https://mits-admission-portal.onrender.com/assets/images/logo.png"
+                                            class="register_logo" width="120px" height="120px" alt="....">
+                                    </div>
+
+                                    <h5 class="text-center mb-3 pb-3 regs_heading">
+                                        Register Here</h5>
+                                    <% if(message.length>0){ %>
+                                        <div class="alert alert-danger">
+                                            <%= message %>
+                                        </div>
+                                        <% } %>
+
+                                            <form action="/userinsert" method="post" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <input type="text" placeholder="Name" name="name"
+                                                        class="form-control mt-3" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="email" placeholder="Email" name="email"
+                                                        class="form-control mt-3" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" placeholder="Password" id="myInput1"
+                                                        name="password" class="form-control mt-3" required>
+                                                </div>
+                                                <div class="form-group">
+                                                    <input type="password" placeholder="Confirm Password" id="myInput"
+                                                        name="confirmpassword" class="form-control mt-3" required>
+                                                </div>
+                                                <input type="checkbox" onclick="myFunction()"><span>&nbsp;Show
+                                                    Password</span>
+                                                <div class="form-group my-2">
+                                                    <label class="form-label">Profile Picture</label>
+                                                    <input type="file" name="image"  class="form-control"
+                                                        required />
+                                                </div>
+                                                <div class="form-group text-center">
+                                                    <button type="submit" class="btn btn-info mt-3 form-control mb-3"
+                                                        style="background: #12587a; color: #ffff">
+                                                        Register</button>
+                                                    <span class=" text-center pt-3">HAVE AN ACCOUNT?
+                                                        <a style="color: #393f81;" href="/">LOGIN NOW</a>
+                                                    </span>
+                                                </div>
+                                            </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

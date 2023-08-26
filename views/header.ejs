@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
+    <title>Admission Portal</title>
+
+    <!-- Fontawesome  link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Custom styles for this template -->
+    <link href="/css/admissionportal.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- <link href="/public/assets/js/bootstrap.bundle.js" rel="stylesheet"> -->
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md header fixed-top ps-4 pt-1 p-0">
+        <div class="container-fluid p-0">
+            <a href="" class="navbar-brand">
+                <!--Desktop logo-->
+                <a href="/dashboard">
+                    <img src="https://mits-admission-portal.onrender.com/assets/images/logo.png" width="120px"
+                        class="desk_logo">
+                </a>
+                <!--Mobile logo-->
+                <a href="/dashboard">
+                    <img src="https://mits-admission-portal.onrender.com/assets/images/logo.png" class="mob_logo"
+                        width="120px">
+                </a>
+            </a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#pn">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="pn">
+                <ul class="navbar-nav ms-auto text-uppercase">
+                    <li><a href="/dashboard" class="nav-link">Home</a></li>
+                    <li><a href="/about" class="nav-link">About</a></li>
+                    <li><a href="/contact" class="nav-link">Contact</a></li>
+                    <li><a href="/profile" class="nav-link">Profile</a></li>
+                    <li><a href="/logout" class="nav-link">Logout</a></li>
+                    <li><a href="/" class="nav-link btn btn-info"><%= n %></a></li>
+                </ul>
+                <img src="<%= img.url %>" width="65px" height="65px" alt="...." class="me-3 rounded-circle">
+            </div>
+
+        </div>
+        <!--container-fluid end -->
+    </nav> <!-- Navbar -->
+    <!-- ======================================= -->

@@ -1,0 +1,79 @@
+<%- include('../header.ejs') %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>course edit</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <form action="/courseupdate/<%= d._id %>" method="post">
+                    <div class="mb-3">
+                        <label for="">Name:</label>
+                        <input type="text" value="<%= d.name %>" class="form-control" name="name" placeholder="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Email:</label>
+                        <input type="email" value="<%= d.email %>" class="form-control" name="email" placeholder="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Mobile No:</label>
+                        <input type="number" value="<%= d.mobile %>" class="form-control" name="mobile" placeholder="mobilenumber">
+                    </div>
+                    <div class="mb-3">
+                        <label>D.O.B.:</label>
+                        <input type="date" value="<%= d.dob %>" class="form-control" name="dob" placeholder="dob">
+                    </div>
+                    <div class="mb-3">
+                        <label class="mb-2">Gender</label><br>
+                        <input type="radio" name="gender" value="male" <%= d.gender=='male'?'checked':'' %>>male &nbsp;
+                        <input type="radio" name="gender" value="female"<%= d.gender=='female'?'checked':'' %>>female &nbsp;
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Address:</label>
+                        <textarea name="address"  class="form-control"><%= d.name %></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Select Collage</label>
+                        <select name="collage" class="form-control">
+                            <option>Select</option>
+                            <option <%= d.collage=='MITS'?'selected':'' %>>MITS</option>
+                            <option <%= d.collage=='RJIT'?'selected':'' %>>RJIT</option>
+                            <option <%= d.collage=='ITM'?'selected':'' %>>ITM</option>
+                            <option <%= d.collage=='NITM'?'selected':'' %>>NITM</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Select Course</label>
+                        <select name="course" class="form-control">
+                            <option>Select</option>
+                            <option <%= d.course=='B.Tech.'?'selected':'' %>>B.Tech.</option>
+                            <option <%= d.course=='BCA'?'selected':'' %>>BCA</option>
+                            <option <%= d.course=='MCA'?'selected':'' %>>MCA</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="">Select Branch</label>
+                        <select name="branch" class="form-control">
+                            <option>Select</option>
+                            <option <%= d.branch=='CSE'?'selected':'' %>>CSE</option>
+                            <option <%= d.branch=='IT'?'selected':'' %>>IT</option>
+                            <option <%= d.branch=='EC'?'selected':'' %>>EC</option>
+                            <option <%= d.branch=='ME'?'selected':'' %>>ME</option>
+                            <option <%= d.branch=='EE'?'selected':'' %>>EE</option>
+                        </select>
+                    </div>
+                    <div class="MB-3 text-center">
+                        <button type="submit" class="btn btn-info">Update</button>
+                    </div>
+                    <!-- <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
+                    submit
+                </button> -->
+                </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <%- include('../footer.ejs') %>
+    //g?

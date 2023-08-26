@@ -1,0 +1,181 @@
+<%- include('./header.ejs') %>
+
+    <!--slider div start-->
+    <div class="carousel slide dashpage" data-bs-ride="carousel" id="a">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#a" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#a" data-bs-slide-to="4"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="4000">
+                <img src="https://mits-admission-portal.onrender.com/assets/images/banner1.jpg" class="w-100 "
+                    height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://mits-admission-portal.onrender.com/assets/images/banner4.jpg" class="w-100 "
+                    height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://mits-admission-portal.onrender.com/assets/images/banner5.jpg" class="w-100 "
+                    height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://mits-admission-portal.onrender.com/assets/images/banner6.jpgg" class="w-100 "
+                    height="400px" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="https://mits-admission-portal.onrender.com/assets/images/banner3.jpg" class="w-100 "
+                    height="400px" alt="...">
+            </div>
+        </div>
+        <!--carousel-inner-->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#a" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#a" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    <!--slider div end-->
+    <!-- ================================================================ -->
+
+    <div class="container mb-5 text-center">
+        <h1 class="course_heading mt-5">Hello
+        </h1>
+        <h2 class="course_heading my-3">Register Your Course</h2>
+        <p class="course_para text-center mb-5">Course Registration means the official recording of a student's name to
+            study a course or courses.</p>
+        <div class="row">
+
+            <div class="col-md-4 mb-5">
+                <div class="card card1">
+                    <img class="card-img-top" height="200px" width="300px"
+                        src="https://mits-admission-portal.onrender.com/assets/images/card_image1.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">B.Tech</h5>
+                        <p class="card-text">B.Tech is a professional undergraduate engineering degree</p>
+
+                        <button class="btn cors" data-bs-toggle="modal" data-bs-target="#btech">Register</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card2">
+                    <img class="card-img-top " height="200px!important" width="300px!important"
+                        src="https://mits-admission-portal.onrender.com/assets/images/card_image2.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">BCA</h5>
+                        <p class="card-text">BCA is a three-year Bachelor's Degree in Computer Application </p>
+
+                        <button class="btn cors" data-bs-toggle="modal" data-bs-target="#btech">Register</button>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                <div class="card card3">
+                    <img class="card-img-top " height="200px" width="300px"
+                        src="https://mits-admission-portal.onrender.com/assets/images/card_image3.jpg"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title ">MCA</h5>
+                        <p class="card-text">MCA is a professional post-graduation degree in computer science</p>
+
+                        <button class="btn cors" data-bs-toggle="modal" data-bs-target="#btech">Register</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- btech modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="btech" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">B.Tech.</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="/courseinsert" method="post">
+                        <div class="mb-3">
+                            <label for="">Name:</label>
+                            <input type="text" class="form-control" name="name" placeholder="name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Email:</label>
+                            <input type="email" class="form-control" name="email" placeholder="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Mobile No:</label>
+                            <input type="number" class="form-control" name="mobile" placeholder="mobilenumber">
+                        </div>
+                        <div class="mb-3">
+                            <label>D.O.B.:</label>
+                            <input type="date" class="form-control" name="dob" placeholder="dob">
+                        </div>
+                        <div class="mb-3">
+                            <label class="mb-2">Gender</label><br>
+                            <input type="radio" name="gender" value="male">male &nbsp;
+                            <input type="radio" name="gender" value="female">female &nbsp;
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Address:</label>
+                            <textarea name="address" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Select Collage</label>
+                            <select name="collage" class="form-control">
+                                <option>Select</option>
+                                <option>MITS</option>
+                                <option>RJIT</option>
+                                <option>ITM</option>
+                                <option>NITM</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Select Course</label>
+                            <select name="course" class="form-control">
+                                <option>Select</option>
+                                <option>B.Tech.</option>
+                                <option>BCA</option>
+                                <option>MCA</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="">Select Branch</label>
+                            <select name="branch" class="form-control">
+                                <option>Select</option>
+                                <option>CSE</option>
+                                <option>IT</option>
+                                <option>EC</option>
+                                <option>ME</option>
+                                <option>EE</option>
+                            </select>
+                        </div>
+                        <div class="MB-3 text-center">
+                            <button type="submit" class="btn btn-info">Submit</button>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#">
+                            submit
+                        </button> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- btech modal end-->
+    <%- include('./footer.ejs') %>

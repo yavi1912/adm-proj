@@ -1,0 +1,32 @@
+<%- include('../header.ejs') %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>course view</h1>
+    <div class="container">
+        <table class="table table-bordered">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>phone.No.</th>
+            </tr>
+            <tr>
+                <td>
+                    <%= d._id %>
+                </td>
+                <td>
+                    <%= d.name %>
+                </td>
+                <td>
+                    <%= d.email %>
+                </td>
+                <td>
+                    <%= d.mobile %>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <%- include('../footer.ejs') %>
